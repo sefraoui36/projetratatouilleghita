@@ -1,0 +1,103 @@
+.back-button{
+    background-color: rgba(255, 165, 0, 0.5); /* transparent orange */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 50px;
+    margin-left: 43%;
+    margin-bottom: 50px;
+}
+.back-button:hover {
+    background-color: #ffa500; /* solid orange on hover */
+    transform: scale(1.05);
+}
+header{
+    background-color: rgba(220, 220, 220, 0.15); 
+    backdrop-filter: blur(12px); 
+}
+* {
+    box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body{ 
+        background-color:#FFE0A3;
+        font-family: 'Playfair Display', serif;
+    }
+    .about-us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        margin-top: 20px;
+    }
+    
+    .about-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1200px;
+        background-color: rgba(255, 165, 0, 0.2); 
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .about-image img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .about-text {
+        width: 55%;
+        padding-left: 30px;
+    }
+    
+    .about-text h2 {
+        font-size: 2em;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .about-text h3 {
+        font-size: 1.5em;
+        margin-top: 15px;
+        color: #333;
+    }
+    
+    .about-text p, .about-text ul {
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: #333;
+    }
+    
+    .about-text ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+    
+    .team-member p {
+        font-style: italic;
+        color: #000000;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 15px;
+        background-color: rgba(255, 165, 0, 0.2);
+        border-top: 2px solid #FFDB8C;
+    }
+    
+    footer p {
+        font-size: 1em;
+       font-weight: bolder;
+    }
+    

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Under the Hat | Order your plate now</title>
+    <link rel="stylesheet" href="boutton.css">
+    <link rel="icon" href="../Projectratatouille/images/4001691a-cd8e-4124-a354-a7e06772ce5a-removebg-preview.png"    type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="../Projectratatouille/images/4001691a-cd8e-4124-a354-a7e06772ce5a-removebg-preview.png" alt="the logo of the restaurant named 'Beneath the hat'" width="100">
+        <img src="../Projectratatouille/images/remycheese.png" alt="remy carrying cheese" class="image2" width="40" >
+    </header>
+    <div class="container">
+    <form onsubmit="handleSubmit(event)">
+      
+      <label for="Name">Name:</label><br>
+       <input type="text" id="Name" placeholder="Frist name" required><br>
+        <label for="Surname">Surname:</label>
+          <input type="text" id="Surname"placeholder="Last name" required><br>
+          <label for="phone">Phone Number:</label>
+               <input type="tel" id="phone" placeholder="+33 X XX XX XX XX" 
+             pattern="(\+33\s?|0)[1-9](\s?\d{2}){4}" title="Numéro de téléphone valide, commençant par +33 ou 0 suivi de 9 chiffres." required><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" placeholder="Your address" required><br>
+<br>
+           <h3>Choose your order:</h3>
+              <div class="category-buttons">
+                <button type="button" onclick="showCategory('main')">Main Dishes</button>
+                <button type="button" onclick="showCategory('desserts')">Desserts</button>
+                <button type="button" onclick="showCategory('surprise')">Chef’s Surprise</button>
+                <button type="button" onclick="showCategory('remy')">Remy’s Special</button>
+              </div>
+        
+              <!-- Main Dishes -->
+              <div class="menu-slider" id="main">
+                <div class="dish-card">
+                  <img src="../Projectratatouille/images/pumpkinsoupdishes.png" alt="Pumpkin Soup">
+                  <label><input type="checkbox" name="dish[]" value="Pumpkin Soup"> Pumpkin Soup</label>
+                </div>
+              <div class="dish-card">
+                <img src="../Projectratatouille/images/roastedlamRackmaindsihes.png" alt="Roasted Lamb Rack">
+                <label>
+                  <input type="checkbox" name="dish[]" value="Roasted Lamb Rack">
+                  Roasted Lamb Rack on Potato Purée
+                </label>
+              </div>
+              <div class="dish-card">
+                <img src="../Projectratatouille/images/Herb-CrustedGoldenGratin.png" alt="Herb-Crusted Golden Gratin">
+                <label>
+                  <input type="checkbox" name="dish[]" value="Herb-Crusted Golden Gratin">
+                  Herb-Crusted Golden Gratin
+                </label>
+              </div>
+              <div class="dish-card">
+                <img src="../Projectratatouille/images/StuffedShellswith omatoSauce.png" alt="Stuffed Shells with Tomato Sauce">
+                <label>
+                  <input type="checkbox" name="dish[]" value="Stuffed Shells with Tomato Sauce">
+                  Stuffed Shells with Tomato Sauce
+                </label>
+              </div>
+              </div>
+              <div class="menu-slider" id="desserts">
+                <div class="dish-card">
+                  <img src="../Projectratatouille/images/poachedpeardessets.png" alt="Poached Pear">
+                  <label><input type="checkbox" name="dish[]" value="Poached Pear"> Poached Pear</label>
+                </div>
+                <div class="dish-card">
+                  <img src="../Projectratatouille/images/remysmillefeuilledessert.png" alt="Banana Strawberry Millefeuille">
+                  <label><input type="checkbox" name="dish[]" value="Millefeuille"> Millefeuille</label>
+                </div>
+              </div>
+        
+              <div class="menu-slider" id="surprise">
+                <div class="dish-card">
+                  <img src="../Projectratatouille/images/remyscheeckaecocolatbancmysterydessert.png" alt=" White chocolate cheesecake">
+                  <label><input type="checkbox" name="dish[]" value="White chocolate cheesecake">White chocolate cheesecake</label>
+                </div>
+                <div class="dish-card">
+                  <img src="../Projectratatouille/images/honeycitruscloudcakechefssuprise.png" alt="Honey Citrus Cloud cake">
+                  <label><input type="checkbox" name="dish[]" value="Honey Citrus Cloud cake">Honey Citrus Cloud cake</label>
+
+                </div>
+              </div>
+        
+             
+              <div class="menu-slider" id="remy">
+                <div class="dish-card">
+                  <img src="../Projectratatouille/images/confitbayldiremyspecialchefsuprise.png" alt=" Confit Byaldi – Remy’s Signature Dish">
+                  <label><input type="checkbox" name="dish[]" value=" Confit Byaldi – Remy’s Signature Dish">  Confit Byaldi – Remy’s Signature Dish</label>
+                </div>
+                  <div class="dish-card">
+                  <img src="../Projectratatouille/images/remysoupemaindish.png" alt="Soup à la Gusteau">
+                  <label><input type="checkbox" name="dish[]" value="Soup à la Gusteau">Soup à la Gusteau</label>
+              </div>
+              </div>
+              <div class="center-container">
+              <div class="select-wrapper">
+                <div class="custom-select">Select a payment method</div>
+                <div class="custom-options">
+                  <div data-value="card">💳 Credit card</div>
+                  <div data-value="paypal">💸 PayPal</div>
+                  <div data-value="bank">🏦 Bank transfer</div>
+                  <div data-value="cash">💵 Cash</div>
+                </div>
+              </div>
+                <input type="hidden" name="payment" id="payment" required>
+              </div>
+              <label for="email">Email:</label>
+              <input for="email"type="email" placeholder="contact@gmail.com" required><br>
+              <label for="comments">Special requests:</label><br>
+              <textarea id="comments" rows="4" cols="50" placeholder="Any special requests?"></textarea><br>
+              <label for="deliveryTime"><b>Preferred Delivery Time:</b></label>
+               <input type="time" id="deliveryTime" name="deliveryTime"><br>
+                <div class="label">
+               <label>
+                <input type="checkbox" required>
+                I agree to the terms and privacy policy.
+              </label><br>
+                </div>
+               
+              <button type="submit" class="submit-btn"  onclick="showConsoleMessage()">Place Order 🍽️</button>
+                
+              
+
+
+    </form>
+
+
+
+    </div>
+
+    <script>
+      function showCategory(id) {
+        const sliders = document.querySelectorAll('.menu-slider');
+        sliders.forEach(slider => slider.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+      }
+      //changer le survol
+  const select = document.querySelector('.custom-select');
+  const options = document.querySelectorAll('.custom-options div');
+  const hiddenInput = document.getElementById('payment');
+
+  select.addEventListener('click', () => {
+    select.classList.toggle('open');
+  });
+
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      select.textContent = option.textContent;
+      hiddenInput.value = option.dataset.value;
+      select.classList.remove('open');
+    });
+  });
+
+ //chnager le survol
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.select-wrapper')) {
+      select.classList.remove('open');
+    }
+  });
+  function handleSubmit(event) {
+      event.preventDefault(); 
+      setTimeout(function() {
+        window.location.href = "thankyou.html"; 
+      }, 2000); 
+    }
+    </script>
+
+</body>
+</html

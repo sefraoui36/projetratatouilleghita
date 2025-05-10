@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under The Hat  |  spin the wheel!</title>
+    <link rel="icon" href="../images/4001691a-cd8e-4124-a354-a7e06772ce5a-removebg-preview.png"    type="image/x-icon">
+    <style>
+        body {
+          font-family: 'Playfair Display', serif;
+          background-color: #FFE0A3;
+          text-align: center;
+          padding: 50px;
+        }
+        .wheel {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background: conic-gradient(#ffcc70 0% 33%, #ffeaa7 33% 66%, #ffcc70 66% 100%);
+          margin: auto;
+          border: 6px solid #d9a75f;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+          transform: rotate(0deg);
+          transition: transform 4s ease-out;
+        }
+        .button-spin {
+          margin-top: 30px;
+          padding: 12px 24px;
+          background-color: #d9923b;
+          color: white;
+          border: none;
+          border-radius: 10px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        .result {
+          font-size: 1.5em;
+          margin-top: 20px;
+          color: #7a4e1d;
+        }
+        .back-button{
+    background-color: rgba(255, 165, 0, 0.5); /* transparent orange */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+.back-button:hover {
+    background-color: #ffa500; /* solid orange on hover */
+    transform: scale(1.05);
+}
+      </style>
+    </head>
+    <body>
+      <h1>Spin the Wheel </h1>
+      <div class="wheel" id="wheel"></div>
+      <button class="button-spin" onclick="spin()">SPIN</button>
+      <p id="result" class="result"></p>
+      <a href="winfreedelivery.html" >
+        <button class="back-button">Back to the games</button>
+    </a> 
+      <script>
+        function spin() {
+          const wheel = document.getElementById("wheel");
+          const result = document.getElementById("result");
+          const deg = Math.floor(3600 + Math.random() * 720);
+          wheel.style.transform = `rotate(${deg}deg)`;
+    
+          setTimeout(() => {
+            const outcome = deg % 360;
+            if (outcome < 120) {
+              result.innerText = "🙁 Sorry, try again!";
+              console.log("User did not win.");
+            } else if (outcome < 240) {
+              result.innerText = "🎉 You won free delivery!";
+              console.log("User won free delivery.");
+            } else {
+              result.innerText = "🙁 Sorry, try again!";
+              console.log("User did not win.");
+            }
+          }, 4000);
+        }
+      </script>
+    </body>
+    </html>

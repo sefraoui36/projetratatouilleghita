@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body{ 
+        background-color:#FFE0A3;
+        font-family: 'Playfair Display', serif;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin: 0;
+        color: #D66B00;
+    }
+    
+    p {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+    
+    /* Story section */
+    .story {
+        padding: 20px;
+        background-color: rgba(255, 165, 0, 0.2); 
+        border-radius: 8px;
+        margin: 20px;
+       
+       
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+           
+           
+            width: 100%;  /* Adjust width */
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .container {
+            max-width: 50%;  /* Adjust the width of the text content */
+            margin-right: 20px;  /* Space between the text and image */
+        }
+    .dish1mage{ 
+        max-width: 200px;  /* Adjust right image size */
+        height: auto;
+        border-radius: 8px;
+        margin-left: 20px;
+    }
+    
+    .story h2 {
+        font-size: 2em;
+        color: #D66B00;
+        text-align: center;
+    }
+    
+    .story p {
+        font-size: 1.1em;
+        padding: 10px;
+        text-align: justify;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 15px;
+        background-color: rgba(255, 165, 0, 0.2);
+        border-top: 2px solid #FFDB8C;
+    }
+    
+    footer p {
+        font-size: 1em;
+       font-weight: bolder;
+    }
+   .legumes{ 
+   width: 90px;
+   margin-left: 80%;
+    }
+    header{
+        background-color: rgba(220, 220, 220, 0.15); 
+        backdrop-filter: blur(12px); 
+    }
+    .back-button{
+        background-color: rgba(255, 165, 0, 0.5); 
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        margin-top: 50px;
+        margin-left: 43%;
+      
+        margin-bottom: 50px;
+    }
+    .back-button:hover {
+        background-color: #ffa500; 
+        transform: scale(1.05);
+    }

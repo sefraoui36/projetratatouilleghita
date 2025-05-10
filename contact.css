@@ -1,0 +1,117 @@
+header{
+    background-color: rgba(220, 220, 220, 0.15); 
+    backdrop-filter: blur(12px); 
+}
+* {
+    box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body{ 
+        background-color:#FFE0A3;
+        font-family: 'Playfair Display', serif;
+    }
+    footer {
+        text-align: center;
+        padding: 15px;
+        background-color: rgba(255, 165, 0, 0.2);
+        border-top: 2px solid #FFDB8C;
+    }
+    
+    footer p {
+        font-size: 1em;
+       font-weight: bolder;
+    }
+    .contact-section {
+        background-color: #FFE0A3;
+        padding: 40px;
+        font-family: 'Playfair Display', serif;
+      }
+      
+      .contact-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+      }
+      
+      .contact-image img {
+        max-width: 400px;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      
+      .contact-form {
+        max-width: 500px;
+        background-color: rgba(255, 165, 0, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      
+      .contact-form h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+      
+      .contact-form p {
+        font-size: 1em;
+        margin-bottom: 20px;
+      }
+      
+      .contact-form label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-top: 5px;
+        font-family: 'Playfair Display', serif;
+      }
+      
+      .contact-form button {
+        margin-top: 20px;
+        background-color: rgba(255, 165, 0, 0.5);
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+      
+      .contact-form button:hover {
+        background-color: #ffa500;
+        transform: scale(1.05);
+      }
+      .contact-form input,
+.contact-form textarea {
+  
+    background-color: rgba(255, 165, 0, 0.2);
+}
+.back-button{
+    background-color: rgba(255, 165, 0, 0.5); 
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 50px;
+    margin-left: 43%;
+  
+    margin-bottom: 50px;
+}
+.back-button:hover {
+    background-color: #ffa500; 
+    transform: scale(1.05);
+}
