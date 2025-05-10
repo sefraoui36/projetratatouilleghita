@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body{ 
+        background-color:#FFE0A3;
+        font-family: 'Playfair Display', serif;
+        overflow-x: hidden;
+    }
+    header{ 
+        background-color: rgba(220, 220, 220, 0.15); 
+        backdrop-filter: blur(12px); 
+      }
+      .thankyou{ 
+        width:21%;
+      }
+      .thank-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40vw; 
+        height: 100vh;
+        overflow: hidden;
+      }
+      
+      .thank-container img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        display: block;
+        margin-left: 200px; 
+      }
+
+
+
+
+      
+      .thankyou-container {
+        background-color: rgba(255, 165, 0, 0.2); 
+        padding: 30px 30px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        color: white;
+        max-width: 300px; /* Adjust the width as needed */
+        margin-right: 900px;
+        margin-left: 100px;
+        margin-top: 100px;
+      }
+  
+      /* Thank you message text */
+      .thankyou-message {
+        font-size: 20px; /* Adjust font size */
+        font-weight: bold;
+        color: black;
+      }
+  
+      /* Emoji message */
+      
+      .thankyou-message2{ 
+        color: black;
+      }
+      /* Button to return to homepage */
+      .back-button {
+        background: #FFD87C;
+        color: black;
+        padding: 10px 30px; 
+        font-size: 20px; 
+        border: none; 
+        border-radius: 10px;
+        cursor: pointer; 
+        transition: all 0.3s ease;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        margin-top: 10px;
+      }
+  
+      /* Hover effect on button */
+      .back-button:hover {
+        background-color: orange;
+      } 
+      .back-button:active {
+        background:orange;
+        transform: scale(1.2); 
+        box-shadow: 0 0 15px #ffa500;
+      } 

@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body{ 
+        background-color:#FFE0A3;
+        font-family: 'Playfair Display', serif;
+    }
+      .container{ 
+        background-color: rgba(255, 224, 163, 0.3); /* #FFE0A3 avec transparence */
+        backdrop-filter: blur(12px);
+        padding: 40px;
+         border-radius: 15px;
+         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+         max-width: 500px;
+         width: 90%;
+         box-sizing: border-box;
+         margin-left: 31%;
+         margin-top: 10px;
+      }
+      .select-wrapper {
+        position: relative;
+        width: 280px;
+       
+      }
+  
+      .custom-select {
+        background-color: rgba(255, 165, 0, 0.2); 
+        border: 2px solid #000000;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      input[type="time"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+      .submit-btn {
+        background-color: rgba(255, 165, 0, 0.5); /* transparent orange */
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        margin-top: 50px;
+        margin-left: 30%;
+      }
+      
+      .submit-btn:hover {
+        background-color: #ffa500; /* solid orange on hover */
+        transform: scale(1.05);
+      }
+      
+      input[type="time"]:hover {
+        border-color: #ffa500;
+        background-color: #fffaf0; 
+      }
+      
+      input[type="time"]:focus {
+        border-color: #ffa500;
+        box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+        outline: none;
+      }
+      .label{ 
+        border: 1px solid #ffa500;
+        background-color: rgba(255, 165, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        border-radius:210px ;
+        margin-top: 100px;
+      }
+      .custom-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 165, 0, 0.2); 
+        border: 2px solid #000000;
+        border-top: none;
+        display: none;
+        z-index: 10;
+      }
+  
+      .custom-options div {
+        padding: 10px;
+        cursor: pointer;
+      }
+  
+      .custom-options div:hover {
+        background-color: #ffa500;
+        color: white;
+      }
+  
+      .custom-select.open + .custom-options {
+        display: block;
+      }
+      
+      
+      header{ 
+        background-color: rgba(220, 220, 220, 0.15); 
+        backdrop-filter: blur(12px); 
+      }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      background-color: rgba(255, 165, 0, 0.3);
+    }
+
+    textarea {
+      resize: vertical;
+    }
+    .category-buttons {
+      display: flex;
+      justify-content:space-around ;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 30px 0 20px;
+      margin-top: 20px;
+    }
+    h3{
+      text-align: center;
+    }
+    .category-buttons button{ 
+      border:none;
+      background-color: rgba(255, 165, 0, 0.5);
+
+      padding: 12px 25px;
+      font-weight: bold;
+      color:#000000;
+       font-size: 15px;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0,0.15);
+      cursor:pointer;
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+    .category-buttons button:hover {
+      background-color: #ffa500;
+    }
+
+    .menu-slider {
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .menu-slider.active {
+      display: grid;
+    }
+
+    .dish-card {
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 15px;
+      background-color: #fff5e6;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background-color: rgba(255, 165, 0, 0.15);
+    }
+
+    .dish-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .dish-card label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .dish-card input[type="checkbox"] {
+      margin-top: 8px;
+    }

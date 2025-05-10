@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under The Hat  |  memory game!</title>
+    <link rel="icon" href="images/4001691a-cd8e-4124-a354-a7e06772ce5a-removebg-preview.png"    type="image/x-icon">
+</head>
+<style>
+    body {
+      background-color: #FFE0A3;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      padding: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 10px;
+      justify-content: center;
+      margin: 20px auto;
+    }
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      border: 2px solid #d9a75f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .card.matched {
+      background-color: #d9a75f;
+      color: white;
+    }
+    .back-button{
+    background-color: rgba(255, 165, 0, 0.5); /* transparent orange */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+}
+.back-button:hover {
+    background-color: #ffa500; /* solid orange on hover */
+    transform: scale(1.05);
+}
+  </style>
+<body>
+    <h1>Memory Game </h1>
+  <div class="grid" id="grid"></div>
+  <p id="message"></p>
+  <a href="winfreedelivery.html" >
+    <button class="back-button">Back to the games</button>
+</a> 
+  <script>
+    const icons = ["🍕", "🍰", "🍇", "🍒", "🍕", "🍰", "🍇", "🍒"];
+    let shuffled = icons.sort(() => 0.5 - Math.random());
+    let selected = [];
+    let matched = 0;
+
+    const grid = document.getElementById("grid");
+    const message = document.getElementById("message");
+
+    shuffled.forEach((icon, index) => {
+      const div = document.createElement("div");
+      div.classList.add("card");
+      div.dataset.icon = icon;
+      div.dataset.index = index;
+      div.onclick = selectCard;
+      grid.appendChild(div);
+    });
+
+    function selectCard() {
+      if (selected.length === 2 || this.classList.contains("matched")) return;
+
+      this.textContent = this.dataset.icon;
+      selected.push(this);
+
+      if (selected.length === 2) {
+        const [first, second] = selected;
+        if (first.dataset.icon === second.dataset.icon) {
+          first.classList.add("matched");
+          second.classList.add("matched");
+          matched += 2;
+          if (matched === shuffled.length) {
+            message.textContent = "🎉 You won free delivery!";
+            console.log("User won free delivery in memory game.");
+          }
+        } else {
+          setTimeout(() => {
+            first.textContent = "";
+            second.textContent = "";
+          }, 700);
+        }
+        selected = [];
+      }
+    }
+  </script>
+</body>
+</html>

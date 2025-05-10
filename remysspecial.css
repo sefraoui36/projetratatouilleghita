@@ -1,0 +1,97 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+   
+  }
+* {
+    box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+body {
+    background-color:#FFE0A3;
+        font-family: 'Playfair Display', serif;
+  }
+   header{ 
+    background-color: rgba(220, 220, 220, 0.15); 
+    backdrop-filter: blur(12px); 
+  }
+  .grid-recettes.grand-style {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+  }
+  
+  .carte-large {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 165, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .carte-large:hover {
+    transform: translateY(-6px);
+  }
+  
+  .carte-large img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .carte-large .contenu {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .carte-large h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .carte-large p {
+    font-size: 1em;
+    color: #666;
+  }
+  .back-button{
+    background-color: rgba(255, 165, 0, 0.5); /* transparent orange */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 50px;
+    margin-left: 45%;
+    margin-bottom: 50px;
+}
+.back-button:hover {
+    background-color: #ffa500; /* solid orange on hover */
+    transform: scale(1.05);
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 165, 0, 0.2);
+    border-top: 2px solid #FFDB8C;
+}
+
+footer p {
+    font-size: 1em;
+   font-weight: bolder;
+}
+.remysalt{ 
+    width: 90px;
+    margin-left: 80%;
+}

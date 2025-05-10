@@ -1,0 +1,91 @@
+header{
+    background-color: rgba(220, 220, 220, 0.15); 
+    backdrop-filter: blur(12px); 
+}
+* {
+    box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body{ 
+        background-color:#FFE0A3;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .titre-jeux {
+        text-align: center;
+        font-size: 2.2em;
+        margin: 30px 0;
+        color: #a0522d;
+      }
+      
+      .grid-jeux {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 30px;
+      }
+      
+      
+      
+      .carte-jeu:hover {
+        transform: translateY(-8px);
+      }
+      
+      .carte-jeu {
+        background-color: rgba(255, 222, 173, 0.3);
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s;
+        text-decoration: none;
+        color: inherit;
+        min-height: 400px; /* 👉 rend la carte plus haute */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      .carte-jeu img {
+        width: 100%;
+        height: 250px; /* 👉 image plus grande */
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+        align-items: center;
+      }
+      
+      .contenu-jeu {
+        padding: 20px;
+      }
+      
+   
+      
+      .contenu-jeu h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5em;
+      }
+      
+      .contenu-jeu p {
+        font-size: 1em;
+        color: #5c4033;
+      }
+      .back-button{
+        background-color: rgba(255, 165, 0, 0.5); 
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        margin-top: 50px;
+        margin-left: 43%;
+      
+        margin-bottom: 50px;
+    }
+    .back-button:hover {
+        background-color: #ffa500; 
+        transform: scale(1.05);
+    }
+    
+      
